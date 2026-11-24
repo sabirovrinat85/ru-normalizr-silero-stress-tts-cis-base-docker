@@ -1,0 +1,15 @@
+services:
+  ru-tts:
+    build: .
+    ports:
+      - "8030:8000"
+    volumes:
+      - ./dicts:/dictionaries:ro
+    environment:
+      TTS_NUM_THREADS: "4"
+      TTS_VOICES: ru_albina,ru_marat,ru_ekaterina,ru_gamat,ru_aigul,ru_alfia,ru_alfia2,ru_vika,ru_bogdan,ru_saida,ru_igor,ru_roman,tat_albina,tat_marat,chv_ekaterina,aze_gamat,bak_aigul,bak_alfia,bak_alfia2,kat_vika,udm_bogdan,uzb_saida,ukr_igor,ukr_roman
+      TTS_DEFAULT_VOICE: ru_albina
+      DICT_PATH: /dictionaries
+      # Optional, leave empty to load all .dic in the folder:
+      #DICT_INCLUDE: rusabbr.dic,brands.dic,phones.dic
+      # DICT_EXCLUDE: legacy.dic

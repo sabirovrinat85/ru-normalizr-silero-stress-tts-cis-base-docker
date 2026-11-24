@@ -1,0 +1,6 @@
+fastapi
+uvicorn[standard]
+ru-normalizr
+silero-stress
+silero
+pydantic
