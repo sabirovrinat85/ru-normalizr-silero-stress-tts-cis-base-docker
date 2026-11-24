@@ -28,5 +28,5 @@ jobs:
           context: . # Path to your Dockerfile directory
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/ru-normalizr-silero-cis-tss:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/ru-normalizr-silero-cis-tss:${{ github.sha }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/ru-normalizr-silero-cis-tts:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/ru-normalizr-silero-cis-tts:${{ github.sha }}
