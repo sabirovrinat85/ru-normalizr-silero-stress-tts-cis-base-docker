@@ -11,7 +11,7 @@ from pydantic import BaseModel
 
 from ru_normalizr import NormalizeOptions, Normalizer
 from silero import silero_tts
-from silero_stress import load_accentor          # ← the real import
+from silero_stress import load_accentor
 
 # ── CPU threads ──
 N_THREADS = int(os.environ.get("TTS_NUM_THREADS", os.cpu_count() or 4))
@@ -52,7 +52,7 @@ app = FastAPI()
 
 # ── Load once at startup ──
 normalizer    = _build_normalizer()              # ← use the dict-aware builder
-accentor      = load_accentor()                # ← loads the stress/accent model
+accentor      = load_accentor(lang='ru')                # ← loads the stress/accent model
 tts_model, _  = silero_tts(language="ru", speaker="v5_cis_base")
 
 
