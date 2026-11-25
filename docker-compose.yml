@@ -11,5 +11,5 @@ services:
       TTS_DEFAULT_VOICE: ru_albina
       DICT_PATH: /dictionaries
       # Optional, leave empty to load all .dic in the folder:
-      #DICT_INCLUDE: rusabbr.dic,brands.dic,phones.dic
+      # DICT_INCLUDE: rusabbr.dic,brands.dic,phones.dic
       # DICT_EXCLUDE: legacy.dic
